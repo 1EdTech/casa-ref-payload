@@ -2,11 +2,11 @@ require 'test/unit'
 require 'casa-payload'
 require 'json-schema'
 
-class TestPayloadAbstractJournalEntry < Test::Unit::TestCase
+class TestAbstractPayloadJournalEntry < Test::Unit::TestCase
 
   include CASA::Payload
 
-  def test_requirements cls = PayloadAbstractJournalEntry
+  def test_requirements cls = AbstractPayloadJournalEntry
 
     assert_raise JSON::Schema::ValidationError, "Missing required originator_id attribute" do
       cls.new({

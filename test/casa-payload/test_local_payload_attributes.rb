@@ -2,11 +2,11 @@ require 'test/unit'
 require 'casa-payload'
 require 'json-schema'
 
-class TestPayloadLocalAttributes < TestPayloadAbstractAttributes
+class TestLocalPayloadAttributes < TestAbstractPayloadAttributes
 
   include CASA::Payload
 
-  def test_requirements cls = PayloadLocalAttributes
+  def test_requirements cls = LocalPayloadAttributes
 
     super cls
 

@@ -1,7 +1,7 @@
 require 'casa-payload/schema_object'
 require 'casa-payload/payload_identity'
-require 'casa-payload/payload_local_attributes'
-require 'casa-payload/payload_local_journal'
+require 'casa-payload/local_payload_attributes'
+require 'casa-payload/local_payload_journal'
 
 module CASA
   module Payload
@@ -12,9 +12,9 @@ module CASA
         'type' => 'object',
         'properties' => {
           'identity' => PayloadIdentity.schema,
-          'attributes' => PayloadLocalAttributes.schema,
-          'journal' => PayloadLocalJournal.schema,
-          'original' => PayloadLocalAttributes.schema
+          'attributes' => LocalPayloadAttributes.schema,
+          'journal' => LocalPayloadJournal.schema,
+          'original' => LocalPayloadAttributes.schema
         },
         'required' => [
           'identity',

@@ -1,14 +1,14 @@
 require 'casa-payload/schema_object'
-require 'casa-payload/payload_abstract_journal_entry'
+require 'casa-payload/abstract_payload_journal_entry'
 
 module CASA
   module Payload
-    class PayloadLocalJournalEntry < SchemaObject
+    class LocalPayloadJournalEntry < SchemaObject
         
       self.schema!({
-        'title' => 'PayloadLocalJournalEntry',
+        'title' => 'LocalPayloadJournalEntry',
         'type' => 'object',
-        'properties' => PayloadAbstractJournalEntry.schema['properties'].merge({
+        'properties' => AbstractPayloadJournalEntry.schema['properties'].merge({
           'use' => {
             'type' => 'object',
             'default' => {}
@@ -18,7 +18,7 @@ module CASA
               'default' => {}
           }
         }),
-        'required' => PayloadAbstractJournalEntry.schema['required'],
+        'required' => AbstractPayloadJournalEntry.schema['required'],
         'additionalProperties' => false
       })
 

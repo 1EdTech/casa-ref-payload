@@ -2,10 +2,10 @@ require 'casa-payload/schema_object'
 
 module CASA
   module Payload
-    class PayloadAbstractJournalEntry < SchemaObject
+    class AbstractPayloadJournalEntry < SchemaObject
         
       self.schema!({
-        'title' => 'PayloadAbstractJournalEntry',
+        'title' => 'AbstractPayloadJournalEntry',
         'type' => 'object',
         'properties' => {
           'originator_id' => {

@@ -2,10 +2,10 @@ require 'casa-payload/schema_object'
 
 module CASA
   module Payload
-    class PayloadAbstractAttributes < SchemaObject
+    class AbstractPayloadAttributes < SchemaObject
         
       self.schema!({
-        'title' => 'PayloadAbstractAttributes',
+        'title' => 'AbstractPayloadAttributes',
         'type' => 'object',
         'properties' => {
           'timestamp' => {

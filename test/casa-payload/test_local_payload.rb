@@ -11,9 +11,9 @@ class TestLocalPayload < Test::Unit::TestCase
     [
 
         [LocalPayload.schema['properties']['identity'], PayloadIdentity.schema],
-        [LocalPayload.schema['properties']['attributes'], PayloadLocalAttributes.schema],
-        [LocalPayload.schema['properties']['journal'], PayloadLocalJournal.schema],
-        [LocalPayload.schema['properties']['original'], PayloadLocalAttributes.schema]
+        [LocalPayload.schema['properties']['attributes'], LocalPayloadAttributes.schema],
+        [LocalPayload.schema['properties']['journal'], LocalPayloadJournal.schema],
+        [LocalPayload.schema['properties']['original'], LocalPayloadAttributes.schema]
 
     ].each do |schema|
       assert HashDiff.diff(schema[0],schema[1]).size == 0

@@ -2,11 +2,11 @@ require 'test/unit'
 require 'casa-payload'
 require 'json-schema'
 
-class TestPayloadLocalJournalEntry < TestPayloadAbstractJournalEntry
+class TestLocalPayloadJournalEntry < TestAbstractPayloadJournalEntry
 
   include CASA::Payload
 
-  def test_requirements cls = PayloadLocalJournalEntry
+  def test_requirements cls = LocalPayloadJournalEntry
 
     super cls
 

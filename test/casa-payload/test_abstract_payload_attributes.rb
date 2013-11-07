@@ -2,11 +2,11 @@ require 'test/unit'
 require 'casa-payload'
 require 'json-schema'
 
-class TestPayloadAbstractAttributes < Test::Unit::TestCase
+class TestAbstractPayloadAttributes < Test::Unit::TestCase
 
   include CASA::Payload
 
-  def test_requirements cls = PayloadAbstractAttributes
+  def test_requirements cls = AbstractPayloadAttributes
 
     assert_raise JSON::Schema::ValidationError, "Missing required timestamp attribute" do
       cls.new({

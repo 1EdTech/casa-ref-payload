@@ -1,14 +1,14 @@
 require 'casa-payload/schema_object'
-require 'casa-payload/payload_abstract_attributes'
+require 'casa-payload/abstract_payload_attributes'
 
 module CASA
   module Payload
-    class PayloadLocalAttributes < SchemaObject
+    class LocalPayloadAttributes < SchemaObject
         
       self.schema!({
-        'title' => 'PayloadLocalAttributes',
+        'title' => 'LocalPayloadAttributes',
         'type' => 'object',
-        'properties' => PayloadAbstractAttributes.schema['properties'].merge({
+        'properties' => AbstractPayloadAttributes.schema['properties'].merge({
           'use' => {
             'type' => 'object',
             'default' => {}
@@ -18,7 +18,7 @@ module CASA
               'default' => {}
           }
         }),
-        'required' => PayloadAbstractAttributes.schema['required'],
+        'required' => AbstractPayloadAttributes.schema['required'],
         'additionalProperties' => false
       })
 
