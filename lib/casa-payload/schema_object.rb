@@ -54,7 +54,7 @@ module CASA
         hash
       end
       
-      def to_json
+      def to_json options = nil
          MultiJson.dump to_hash
       end
       
