@@ -9,10 +9,10 @@ Gem::Specification.new do |s|
   s.license     = 'BSD-3-Clause'
   
   s.files       = ['lib/casa-payload.rb']
-  
+
+  s.add_dependency 'json'
   s.add_dependency 'json-schema'
   s.add_dependency 'multi_json'
-  s.add_dependency 'json-schema'
   
   s.add_development_dependency 'rake'
   s.add_development_dependency 'hashdiff'

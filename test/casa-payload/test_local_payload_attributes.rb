@@ -31,10 +31,10 @@ class TestLocalPayloadAttributes < TestAbstractPayloadAttributes
         'share' => true,
         'propagate' => true,
         'use' => {
-            'attr' => true
+            'bd4865ac-62e1-11e3-bf13-d231feb1dc81' => true
         },
         'require' => {
-            'attr' => true
+            'bfcc7ff2-62e1-11e3-bf13-d231feb1dc81' => true
         }
       }).to_hash
     end

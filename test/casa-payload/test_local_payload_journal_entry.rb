@@ -27,10 +27,10 @@ class TestLocalPayloadJournalEntry < TestAbstractPayloadJournalEntry
         'originator_id' => 'f5b28107-e2c7-46f9-b2fc-34974ede7083',
         'timestamp' => '1996-12-19T16:39:57-08:00',
         'use' => {
-            'attr' => true
+            'bd4865ac-62e1-11e3-bf13-d231feb1dc81' => true
         },
         'require' => {
-            'attr' => true
+            'bfcc7ff2-62e1-11e3-bf13-d231feb1dc81' => true
         }
       }).to_hash
     end
