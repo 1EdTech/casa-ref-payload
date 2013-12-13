@@ -1,5 +1,6 @@
 require 'casa-payload/schema_object'
 require 'casa-payload/abstract_payload_attributes'
+require 'casa-payload/local_payload_attributes_section'
 
 module CASA
   module Payload
@@ -9,14 +10,8 @@ module CASA
         'title' => 'LocalPayloadAttributes',
         'type' => 'object',
         'properties' => AbstractPayloadAttributes.schema['properties'].merge({
-          'use' => {
-            'type' => 'object',
-            'default' => {}
-          },
-          'require' => {
-              'type' => 'object',
-              'default' => {}
-          }
+          'use' => LocalPayloadAttributesSection.schema,
+          'require' => LocalPayloadAttributesSection.schema
         }),
         'required' => AbstractPayloadAttributes.schema['required'],
         'additionalProperties' => false
