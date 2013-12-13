@@ -1,5 +1,6 @@
 require 'casa-payload/schema_object'
 require 'casa-payload/abstract_payload_attributes'
+require 'casa-payload/transit_payload_attributes_section'
 
 module CASA
   module Payload
@@ -9,42 +10,8 @@ module CASA
         'title' => 'TransitPayloadAttributes',
         'type' => 'object',
         'properties' => AbstractPayloadAttributes.schema['properties'].merge({
-          'use' => {
-            'type' => 'object',
-            'patternProperties' => {
-              '^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$' => {
-                'type' => [
-                  'array',
-                  'boolean',
-                  'integer',
-                  'null',
-                  'number',
-                  'object',
-                  'string'
-                ]
-              }
-            },
-            'additionalProperties' => false,
-            'default' => {}
-          },
-          'require' => {
-              'type' => 'object',
-              'patternProperties' => {
-                '^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$' => {
-                  'type' => [
-                    'array',
-                    'boolean',
-                    'integer',
-                    'null',
-                    'number',
-                    'object',
-                    'string'
-                  ]
-                }
-              },
-              'additionalProperties' => false,
-              'default' => {}
-          }
+          'use' => TransitPayloadAttributesSection.schema,
+          'require' => TransitPayloadAttributesSection.schema
         }),
         'required' => AbstractPayloadAttributes.schema['required'],
         'additionalProperties' => false

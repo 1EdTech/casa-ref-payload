@@ -1,50 +1,17 @@
 require 'casa-payload/schema_object'
 require 'casa-payload/abstract_payload_journal_entry'
+require 'casa-payload/transit_payload_attributes_section'
 
 module CASA
   module Payload
     class TransitPayloadJournalEntry < SchemaObject
-        
+
       self.schema!({
         'title' => 'TransitPayloadJournalEntry',
         'type' => 'object',
         'properties' => AbstractPayloadJournalEntry.schema['properties'].merge({
-          'use' => {
-            'type' => 'object',
-            'patternProperties' => {
-              '^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$' => {
-                'type' => [
-                  'array',
-                  'boolean',
-                  'integer',
-                  'null',
-                  'number',
-                  'object',
-                  'string'
-                ]
-              }
-            },
-            'additionalProperties' => false,
-            'default' => {}
-          },
-          'require' => {
-              'type' => 'object',
-              'patternProperties' => {
-                '^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$' => {
-                  'type' => [
-                    'array',
-                    'boolean',
-                    'integer',
-                    'null',
-                    'number',
-                    'object',
-                    'string'
-                  ]
-                }
-              },
-              'additionalProperties' => false,
-              'default' => {}
-          }
+          'use' => TransitPayloadAttributesSection.schema,
+          'require' => TransitPayloadAttributesSection.schema
         }),
         'required' => AbstractPayloadJournalEntry.schema['required'],
         'additionalProperties' => false
