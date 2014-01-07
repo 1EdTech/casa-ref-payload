@@ -72,4 +72,11 @@ class TestSchemaObject < Test::Unit::TestCase
 
   end
 
+  def test_brackets
+    obj = SchemaObject.new({'a'=>'b'})
+    assert obj['a'] == 'b'
+    obj['a'] = 'c'
+    assert obj['a'] == 'c'
+  end
+
 end

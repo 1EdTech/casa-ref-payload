@@ -38,7 +38,15 @@ module CASA
       def schema
         self.class.schema
       end
-      
+
+      def [] key
+        send key.to_sym
+      end
+
+      def []= key, value
+        send "#{key}=".to_sym, value
+      end
+
       def to_hash
         hash = marshal_dump.inject({}) do |memo,(k,v)|
           if v.respond_to?('to_hash')
