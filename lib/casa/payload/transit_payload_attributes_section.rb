@@ -1,4 +1,4 @@
-require 'casa-payload/schema_object'
+require 'casa/payload/schema_object'
 
 module CASA
   module Payload

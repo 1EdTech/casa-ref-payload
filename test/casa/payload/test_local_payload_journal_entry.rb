@@ -1,5 +1,5 @@
 require 'test/unit'
-require 'casa-payload'
+require 'casa/payload'
 require 'json-schema'
 
 class TestLocalPayloadJournalEntry < TestAbstractPayloadJournalEntry

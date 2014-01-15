@@ -1,29 +1,29 @@
-require 'casa-payload/schema_object'
+require 'casa/payload/schema_object'
 
 module CASA
   module Payload
-    class AbstractPayloadJournalEntry < SchemaObject
+    class PayloadIdentity < SchemaObject
         
       self.schema!({
-        'title' => 'AbstractPayloadJournalEntry',
+        'title' => 'PayloadIdentity',
         'type' => 'object',
         'properties' => {
+          'id' => {
+            'type' => 'string'
+          },
           'originator_id' => {
             'type' => 'string',
             'pattern' => '^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$'
-          },
-          'timestamp' => {
-            'type' => 'string',
-            'format' => 'date-time'
           }
         },
         'required' => [
-          'originator_id',
-          'timestamp'
+          'id',
+          'originator_id'
         ],
         'additionalProperties' => false
       })
-
+      
     end
   end
 end
+

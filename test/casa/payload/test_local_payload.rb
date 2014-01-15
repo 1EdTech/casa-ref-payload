@@ -1,5 +1,5 @@
 require 'test/unit'
-require 'casa-payload'
+require 'casa/payload'
 require 'hashdiff'
 
 class TestLocalPayload < Test::Unit::TestCase

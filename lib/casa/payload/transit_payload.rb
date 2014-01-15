@@ -1,7 +1,7 @@
-require 'casa-payload/schema_object'
-require 'casa-payload/payload_identity'
-require 'casa-payload/transit_payload_attributes'
-require 'casa-payload/transit_payload_journal'
+require 'casa/payload/schema_object'
+require 'casa/payload/payload_identity'
+require 'casa/payload/transit_payload_attributes'
+require 'casa/payload/transit_payload_journal'
 
 module CASA
   module Payload

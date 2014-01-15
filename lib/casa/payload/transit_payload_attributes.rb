@@ -1,6 +1,6 @@
-require 'casa-payload/schema_object'
-require 'casa-payload/abstract_payload_attributes'
-require 'casa-payload/transit_payload_attributes_section'
+require 'casa/payload/schema_object'
+require 'casa/payload/abstract_payload_attributes'
+require 'casa/payload/transit_payload_attributes_section'
 
 module CASA
   module Payload

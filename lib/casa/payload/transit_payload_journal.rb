@@ -1,5 +1,5 @@
-require 'casa-payload/schema_object'
-require 'casa-payload/transit_payload_journal_entry'
+require 'casa/payload/schema_object'
+require 'casa/payload/transit_payload_journal_entry'
 
 module CASA
   module Payload

@@ -74,6 +74,12 @@ module CASA
           false
         end
       end
+
+      def validate!
+        enable_validation!
+        to_hash
+        self
+      end
       
     end
   end
