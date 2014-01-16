@@ -18,6 +18,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'multi_json'
   
   s.add_development_dependency 'rake'
+  s.add_development_dependency 'coveralls'
   s.add_development_dependency 'hashdiff'
   
 end
