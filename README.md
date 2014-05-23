@@ -1,3 +1,16 @@
-# CASA Payload Module
+# CASA Payload
 
-[![Code Climate](https://codeclimate.com/github/AppSharing/casa-payload.png)](https://codeclimate.com/github/AppSharing/casa-payload) [![Build Status](https://travis-ci.org/AppSharing/casa-payload.png)](https://travis-ci.org/AppSharing/casa-payload) [![Coverage Status](https://coveralls.io/repos/AppSharing/casa-payload/badge.png)](https://coveralls.io/r/AppSharing/casa-payload) [![Dependency Status](https://gemnasium.com/AppSharing/casa-payload.png)](https://gemnasium.com/AppSharing/casa-payload)
+The [Community App Sharing Architecture (CASA)](http://imsglobal.github.io/casa) provides a mechanism for
+discovering and sharing metadata about web resources such as websites, mobile
+apps and LTI tools. It models real-world decision-making through extensible
+attributes, filter and transform operations, flexible peering relationships,
+etc.
+
+This Ruby gem is part of the CASA reference implementation. It provides
+objects that represent and validate the payload structures of the CASA
+protocol.
+
+## License
+
+This software is **open-source** and licensed under the Apache 2 license.
+The full text of the license may be found in the `LICENSE` file.
